@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kuldeep Sisodiya Portpolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        base: '#0a0a0f',
+                        surface: '#111118',
+                        card: '#1a1a2e',
+                        border: '#2a2a3e',
+                        violet: {
+                            400: '#a78bfa',
+                            500: '#8b5cf6',
+                            600: '#7c3aed',
+                            700: '#6d28d9',
+                        },
+                        muted: '#6b7280',
+                        soft: '#9ca3af',
+                    },
+                    fontFamily: {
+                        display: ['Space Grotesk', 'sans-serif'],
+                        body: ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'gradient-shift': 'gradientShift 8s ease infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4,0,0.6,1) infinite',
+                    },
+                    keyframes: {
+                        gradientShift: {
+                            '0%,100%': { backgroundPosition: '0% 50%' },
+                            '50%': { backgroundPosition: '100% 50%' },
+                        },
+                        float: {
+                            '0%,100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-16px)' },
+                        },
+                    },
+                },
+            },
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+
+    <!--  NAV  -->
+    <nav id="navbar" class="nav-glass fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="#home" class="font-display font-bold text-xl text-white tracking-tight">
+                KS<span class="text-violet-500">.</span>
+            </a>
+            <!-- Desktop -->
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Work</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="hidden md:flex items-center gap-3">
+                <a href="#" class="btn-ghost" style="padding:8px 18px; font-size:14px;">
+                    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path
+                            d="M12 15V3m0 12-4-4m4 4 4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17" />
+                    </svg>
+                    Resume
+                </a>
+            </div>
+            <!-- Hamburger -->
+            <button id="menu-btn" class="md:hidden text-soft p-2" aria-label="Toggle menu">
+                <svg id="icon-open" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"
+                    viewBox="0 0 24 24">
+                    <path d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+                <svg id="icon-close" class="hidden" width="22" height="22" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M6 18 18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="flex-col gap-2 px-6 pb-4 md:hidden">
+            <a href="#about" class="nav-link block py-2" onclick="closeMobile()">About</a>
+            <a href="#skills" class="nav-link block py-2" onclick="closeMobile()">Skills</a>
+            <a href="#projects" class="nav-link block py-2" onclick="closeMobile()">Work</a>
+            <a href="#contact" class="nav-link block py-2" onclick="closeMobile()">Contact</a>
+            <a href="#" class="btn-ghost mt-2" style="padding:10px 18px; font-size:14px; width: fit-content;">Resume</a>
+        </div>
+    </nav>
+
+    <!--  HERO  -->
+    <section id="home" class="relative min-h-screen flex items-center pt-16">
+        <div class="mesh-bg">
+            <div class="mesh-orb orb-1"></div>
+            <div class="mesh-orb orb-2"></div>
+            <div class="mesh-orb orb-3"></div>
+        </div>
+        <div class="relative z-10 max-w-7xl mx-auto px-6 py-24 w-full">
+            <div class="hero-grid grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <!-- Text -->
+                <div>
+                    <div class="section-eyebrow mb-6 reveal" style="width:fit-content">
+                        <span
+                            style="width:6px;height:6px;border-radius:50%;background:#00CEEA;display:inline-block; animation:pulse 2s infinite"></span>
+                        Available for work
+                    </div>
+
+                    <!-- cyan color - #00CEEA -->
+                    <!-- voliet color - #00CEEA -->
+
+                    <h1
+                        class="font-display text-[40px] lg:text-6xl font-bold text-white leading-tight mb-4 reveal reveal-delay-1">
+                        Hi, I'm <span class="grad-text">Kuldeep Sisodiya</span>
+                    </h1>
+                    <div class="font-display text-3xl lg:text-4xl font-semibold text-soft mb-6 reveal reveal-delay-2"
+                        style="min-height:50px">
+                        <span id="typewriter-text"></span><span class="typewriter"></span>
+                    </div>
+                    <p class="text-soft text-lg leading-relaxed max-w-xl mb-8 reveal reveal-delay-3">
+                        I craft fast, accessible, and visually compelling web experiences - from pixel-perfect UIs to
+                        scalable React architectures. Let's build something great together.
+                    </p>
+                    <div class="flex flex-wrap gap-4 mb-10 reveal reveal-delay-4">
+                        <a href="#projects" class="btn-primary">
+                            View my work
+                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"
+                                viewBox="0 0 24 24">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                        <a href="#contact" class="btn-ghost">Let's talk</a>
+                    </div>
+                    <!-- Tech pills -->
+                    <div class="flex flex-wrap gap-2 reveal reveal-delay-4">
+                        <span class="skill-badge">React</span>
+                        <span class="skill-badge">JavaScript</span>
+                        <span class="skill-badge">Tailwind CSS</span>
+                        <span class="skill-badge">Node.js</span>
+                        <span class="skill-badge">Vite</span>
+                    </div>
+                </div>
+                <!-- Avatar -->
+                <div class="flex justify-center lg:justify-end reveal reveal-delay-2">
+                    <div style="position:relative;">
+                        <div class="avatar-ring" style="width:320px;height:320px; animation-play-state:running;">
+                            <div
+                                style="width:100%;height:100%;border-radius:50%;background:#111118;overflow:hidden;display:flex;align-items:center;justify-content:center;">
+                                <!-- Placeholder avatar illustration -->
+                                <svg width="260" height="260" viewBox="0 0 260 260" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="130" cy="130" r="130" fill="#1a1a2e" />
+                                    <circle cx="130" cy="105" r="48" fill="#2a2a3e" />
+                                    <ellipse cx="130" cy="215" rx="72" ry="50" fill="#2a2a3e" />
+                                    <circle cx="130" cy="105" r="42" fill="#3a3a5e" />
+                                    <!-- Face details -->
+                                    <circle cx="115" cy="100" r="5" fill="#2EBED3" />
+                                    <circle cx="145" cy="100" r="5" fill="#2EBED3" />
+                                    <path d="M118 118 Q130 126 142 118" stroke="#2EBED3" stroke-width="2.5"
+                                        stroke-linecap="round" fill="none" />
+                                </svg>
+                            </div>
+                        </div>
+                        <!-- Floating badge -->
+                        <div style="position:absolute;bottom:-10px;right:-20px;background:#1a1a2e;border:1px solid #2a2a3e;border-radius:12px;padding:10px 16px;display:flex;align-items:center;gap:8px;box-shadow:0 8px 24px rgba(0,0,0,0.4);"
+                            class="animate-float">
+                            <span style="font-size:22px">⚡</span>
+                            <div>
+                                <div style="font-size:12px;color:#6b7280;">Experience</div>
+                                <div
+                                    style="font-size:15px;font-weight:700;color:white;font-family:'Space Grotesk',sans-serif;">
+                                    1+ Years</div>
+                            </div>
+                        </div>
+                        <div style="position:absolute;top:-10px;left:-20px;background:#1a1a2e;border:1px solid #2a2a3e;border-radius:12px;padding:10px 16px;display:flex;align-items:center;gap:8px;box-shadow:0 8px 24px rgba(0,0,0,0.4);"
+                            class="animate-float" style="animation-delay:1s">
+                            <span style="font-size:22px">🚀</span>
+                            <div>
+                                <div style="font-size:12px;color:#6b7280;">Projects</div>
+                                <div
+                                    style="font-size:15px;font-weight:700;color:white;font-family:'Space Grotesk',sans-serif;">
+                                    10+ Built</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Scroll indicator -->
+            <div class="flex justify-center mt-16 reveal">
+                <a href="#about"
+                    style="display:flex;flex-direction:column;align-items:center;gap:6px;color:#4b5563;text-decoration:none;transition:color 0.2s;"
+                    onmouseover="this.style.color='#2EBED3'" onmouseout="this.style.color='#4b5563'">
+                    <span
+                        style="font-size:12px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase">Scroll</span>
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                        style="animation:bounce 2s infinite">
+                        <path d="M12 5v14M5 12l7 7 7-7" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT  -->
+    <section id="about" class="py-28 max-w-7xl mx-auto px-6">
+        <div class="about-grid grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <!-- Image side -->
+            <div class="flex justify-center reveal">
+                <div style="position:relative;">
+                    <div
+                        style="width:320px;height:380px;background:#1a1a2e;border:1px solid #2a2a3e;border-radius:20px;overflow:hidden;display:flex;align-items:flex-end;justify-content:center;">
+                        <svg width="280" height="340" viewBox="0 0 280 340" fill="none">
+                            <rect width="280" height="340" fill="#1a1a2e" />
+                            <circle cx="140" cy="120" r="70" fill="#2a2a3e" />
+                            <circle cx="140" cy="120" r="60" fill="#3a3a5e" />
+                            <circle cx="124" cy="113" r="7" fill="#2EBED3" />
+                            <circle cx="156" cy="113" r="7" fill="#2EBED3" />
+                            <path d="M128 135 Q140 144 152 135" stroke="#2EBED3" stroke-width="3" stroke-linecap="round"
+                                fill="none" />
+                            <ellipse cx="140" cy="310" rx="100" ry="70" fill="#2a2a3e" />
+                        </svg>
+                    </div>
+                    <!-- Code snippet floating -->
+                    <div
+                        style="position:absolute;bottom:20px;right:-30px;background:#0a0a0f;border:1px solid #2a2a3e;border-radius:10px;padding:12px 16px;font-family:monospace;font-size:12px;line-height:1.6;box-shadow:0 8px 32px rgba(0,0,0,0.5);">
+                        <span style="color:#6b7280">const</span> <span style="color:#2EBED3">dev</span> <span
+                            style="color:#6b7280">=</span> {<br>
+                        <span style="color:#818cf8">name</span>: <span style="color:#34d399">'Kuldeep'</span>,<br>
+                        <span style="color:#818cf8">loves</span>: <span style="color:#34d399">'clean
+                            code'</span><br>
+                        }
+                    </div>
+                </div>
+            </div>
+            <!-- Text -->
+            <div class="reveal reveal-delay-1">
+                <div class="section-eyebrow mb-6">About me</div>
+                <h2 class="font-display text-4xl font-bold text-white mb-6">
+                    Building the web, one component at a time
+                </h2>
+                <p class="text-soft text-lg leading-relaxed mb-4">
+                    I'm a frontend developer with 1+ years of experience turning ideas into polished, performant web
+                    applications. I specialize in Frontend development, design systems, and the intersection of great
+                    engineering with great design.
+                </p>
+                <p class="text-soft leading-relaxed mb-8">
+                    When I'm not pushing pixels or writing JavaScript, you'll find me contributing to open source,
+                    writing about frontend architecture, or experimenting with generative art and creative coding.
+                </p>
+                <!-- Stats -->
+                <div class="grid grid-cols-2 gap-4 mb-8">
+                    <div class="stat-card">
+                        <div class="font-display text-3xl font-bold grad-text">10+</div>
+                        <div style="font-size:13px;color:#6b7280;margin-top:4px;">Projects</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="font-display text-3xl font-bold grad-text">1+</div>
+                        <div style="font-size:13px;color:#6b7280;margin-top:4px;">Years exp.</div>
+                    </div>
+                    <!-- <div class="stat-card">
+                        <div class="font-display text-3xl font-bold grad-text">12</div>
+                        <div style="font-size:13px;color:#6b7280;margin-top:4px;">Clients</div>
+                    </div> -->
+                </div>
+                <a href="#" class="btn-primary">
+                    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path
+                            d="M12 15V3m0 12-4-4m4 4 4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17" />
+                    </svg>
+                    Download resume
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS  -->
+    <section id="skills" style="background:#111118;border-top:1px solid #2a2a3e;border-bottom:1px solid #2a2a3e;"
+        class="py-28">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16 reveal">
+                <div class="section-eyebrow mb-4" style="margin:0 auto 16px;">Skills & Tools</div>
+                <h2 class="font-display text-4xl font-bold text-white mb-4">What I work with</h2>
+                <p class="text-soft text-lg max-w-xl mx-auto">My go-to tech stack for building fast, modern, and
+                    accessible web experiences.</p>
+            </div>
+
+            <!-- Skill categories -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+
+                <!-- Frontend -->
+                <div style="background:#1a1a2e;border:1px solid #2a2a3e;border-radius:16px;padding:28px;"
+                    class="reveal">
+                    <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px;">
+                        <div
+                            style="width:36px;height:36px;background:rgba(124,58,237,0.15);border-radius:8px;display:flex;align-items:center;justify-content:center;">
+                            <svg width="18" height="18" fill="none" stroke="#2EBED3" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <path d="M8 9l-3 3 3 3M16 9l3 3-3 3M10 20l4-16" />
+                            </svg>
+                        </div>
+                        <h3 class="font-display font-semibold text-white text-lg">Frontend</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-badge">React.js</span>
+                        <span class="skill-badge">JavaScript</span>
+                        <span class="skill-badge">Vite</span>
+                        <span class="skill-badge">API Integration</span>
+                        <span class="skill-badge">Bootstrap</span>
+                        <span class="skill-badge">Tailwind CSS</span>
+                        <span class="skill-badge">HTML</span>
+                        <span class="skill-badge">CSS</span>
+                    </div>
+                </div>
+
+                <!-- Backend / Tools -->
+                <!-- <div style="background:#1a1a2e;border:1px solid #2a2a3e;border-radius:16px;padding:28px;"
+                    class="reveal reveal-delay-1">
+                    <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px;">
+                        <div
+                            style="width:36px;height:36px;background:rgba(124,58,237,0.15);border-radius:8px;display:flex;align-items:center;justify-content:center;">
+                            <svg width="18" height="18" fill="none" stroke="#2EBED3" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <rect x="2" y="3" width="20" height="14" rx="2" />
+                                <path d="M8 21h8M12 17v4" />
+                            </svg>
+                        </div>
+                        <h3 class="font-display font-semibold text-white text-lg">Backend & APIs</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-badge">Node.js</span>
+                        <span class="skill-badge">Express</span>
+                        <span class="skill-badge">REST APIs</span>
+                        <span class="skill-badge">GraphQL</span>
+                        <span class="skill-badge">PostgreSQL</span>
+                        <span class="skill-badge">MongoDB</span>
+                        <span class="skill-badge">Firebase</span>
+                    </div>
+                </div> -->
+
+                <!-- Tooling -->
+                <div style="background:#1a1a2e;border:1px solid #2a2a3e;border-radius:16px;padding:28px;"
+                    class="reveal reveal-delay-2">
+                    <div style="display:flex;align-items:center;gap:10px;margin-bottom:20px;">
+                        <div
+                            style="width:36px;height:36px;background:rgba(124,58,237,0.15);border-radius:8px;display:flex;align-items:center;justify-content:center;">
+                            <svg width="18" height="18" fill="none" stroke="#2EBED3" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+                            </svg>
+                        </div>
+                        <h3 class="font-display font-semibold text-white text-lg">Tooling & Design</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-badge">Git / GitHub</span>
+                        <span class="skill-badge">Wix</span>
+                        <span class="skill-badge">Figma</span>
+                        <span class="skill-badge">Netlify</span>
+                        <span class="skill-badge">Postman</span>
+                        <span class="skill-badge">API Testing</span>
+                        <span class="skill-badge">Responsive Design</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Proficiency bars -->
+            <!-- <div style="background:#1a1a2e;border:1px solid #2a2a3e;border-radius:16px;padding:32px;margin-top:24px;"
+                class="reveal reveal-delay-2">
+                <h3 class="font-display font-semibold text-white text-lg mb-6">Proficiency</h3>
+                <div style="display:flex;flex-direction:column;gap:18px;" id="skill-bars">
+                   
+                </div>
+            </div> -->
+        </div>
+    </section>
+
+    <!--  PROJECTS  -->
+    <section id="projects" class="py-28  max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16 reveal">
+            <div class="section-eyebrow mb-4" style="margin:0 auto 16px;">Selected Work</div>
+            <h2 class="font-display text-4xl font-bold text-white mb-4">Things I've built</h2>
+            <p class="text-soft text-lg max-w-xl mx-auto">A selection of projects I'm proud of. Every one shipped with
+                care for performance, accessibility, and design.</p>
+        </div>
+
+        <div class="relative">
+
+            <!-- Previous Button -->
+            <button id="prevProject"
+                class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-5 z-20 w-10 h-10 rounded-full bg-[#1a1a2e] border border-[#2a2a3e] text-white hover:bg-violet-600 transition">
+                ❮
+            </button>
+
+            <!-- Slider -->
+            <div class="overflow-hidden py-5">
+                <div id="projectsSlider" class="flex transition-transform duration-500 ease-in-out">
+
+                    <!-- project 1 -->
+                    <div class="project-slide w-full md:w-1/2 lg:w-1/3 shrink-0 px-3">
+                        <div class="project-card reveal">
+                            <div class="relative h-[180px] overflow-hidden bg-[#111118]">
+                                <img src="./images/img1.png" alt="Analytics Dashboard"
+                                    class="w-full h-full object-cover transition-transform duration-500 ease-out hover:scale-110">
+                            </div>
+                            <div style="padding:20px;">
+                                <h3 class="font-display font-semibold text-white text-lg mb-2">Finances Dashboard
+                                </h3>
+                                <p style="color:#6b7280;font-size:14px;line-height:1.6;margin-bottom:14px;">
+                                    Real-time data visualization interface built with React.js, Tailwind CSS. Features
+                                    live chart updates and
+                                    balance tracking.</p>
+                                <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px;">
+                                    <span class="skill-badge" style="font-size:11px;padding:3px 10px;">React.js</span>
+                                    <span class="skill-badge" style="font-size:11px;padding:3px 10px;">Tailwind
+                                        CSS</span>
+                                    <span class="skill-badge" style="font-size:11px;padding:3px 10px;">Farmer
+                                        Motion</span>
+
+                                </div>
+                                <div style="display:flex;gap:10px;">
+                                    <a href="https://financement-dashboard.netlify.app/"
+                                        style="display:inline-flex;align-items:center;gap:5px;color:#2EBED3;font-size:13px;font-weight:600;text-decoration:none;transition:color 0.2s;"
+                                        onmouseover="this.style.color='white'" onmouseout="this.style.color='#2EBED3'">
+                                        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3" />
+                                        </svg> Live demo
+                                    </a>
+                                    <a href="#"
+                                        style="display:inline-flex;align-items:center;gap:5px;color:#6b7280;font-size:13px;font-weight:600;text-decoration:none;transition:color 0.2s;"
+                                        onmouseover="this.style.color='white'" onmouseout="this.style.color='#6b7280'">
+                                        <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
+                                            <path
+                                                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z" />
+                                        </svg> GitHub
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- project 2 -->
+                    <div class="project-slide w-full md:w-1/2 lg:w-1/3 shrink-0 px-3">
+                        <div class="project-card reveal reveal-delay-1">
+                            <div class="relative h-[180px] overflow-hidden bg-[#111118]">
+                                <img src="./images/img2.png" alt="ldv"
+                                    class="w-full h-full object-cover transition-transform duration-500 ease-out hover:scale-110">
+                            </div>
+                            <div style="padding:20px;">
+                                <h3 class="font-display font-semibold text-white text-lg mb-2">Shopfront UI</h3>
+                                <p style="color:#6b7280;font-size:14px;line-height:1.6;margin-bottom:14px;">
+                                    Full-featured e-commerce
+                                    storefront with tiktok live event sales products, just search products with the
+                                    product Id along with Stripe payments gateway.</p>
+                                <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px;">
+                                    <span class="skill-badge" style="font-size:11px;padding:3px 10px;">React.js</span>
+                                    <span class="skill-badge" style="font-size:11px;padding:3px 10px;">Stripe
+                                        gateway</span>
+                                    <span class="skill-badge" style="font-size:11px;padding:3px 10px;">Tailwind
+                                        CSS</span>
+                                </div>
+                                <div style="display:flex;gap:10px;">
+                                    <a href="https://ladolcevita-website.netlify.app/"
+                                        style="display:inline-flex;align-items:center;gap:5px;color:#2EBED3;font-size:13px;font-weight:600;text-decoration:none;transition:color 0.2s;"
+                                        onmouseover="this.style.color='white'" onmouseout="this.style.color='#2EBED3'">
+                                        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3" />
+                                        </svg> Live demo
+                                    </a>
+                                    <a href="#"
+                                        style="display:inline-flex;align-items:center;gap:5px;color:#6b7280;font-size:13px;font-weight:600;text-decoration:none;transition:color 0.2s;"
+                                        onmouseover="this.style.color='white'" onmouseout="this.style.color='#6b7280'">
+                                        <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
+                                            <path
+                                                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z" />
+                                        </svg> GitHub
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- project 3 -->
+                    <div class="project-slide w-full md:w-1/2 lg:w-1/3 shrink-0 px-3">
+                        <div class="project-card reveal reveal-delay-2">
+                            <div class="relative h-[180px] overflow-hidden bg-[#111118]">
+                                <img src="./images/img3.png" alt="ldv"
+                                    class="w-full h-full object-cover transition-transform duration-500 ease-out hover:scale-110">
+                            </div>
+                            <div style="padding:20px;">
+                                <h3 class="font-display font-semibold text-white text-lg mb-2">DevChat</h3>
+                                <p style="color:#6b7280;font-size:14px;line-height:1.6;margin-bottom:14px;">Real-time
+                                    Full-featured e-commerce
+                                    storefront with cart, wishlist, Razer payments, and search product via name ,
+                                    product catalogue.</p>
+                                <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px;">
+                                    <span class="skill-badge" style="font-size:11px;padding:3px 10px;">React</span>
+                                    <span class="skill-badge" style="font-size:11px;padding:3px 10px;">Socket.io</span>
+                                    <span class="skill-badge" style="font-size:11px;padding:3px 10px;">Node.js</span>
+                                    <span class="skill-badge" style="font-size:11px;padding:3px 10px;">MongoDB</span>
+                                </div>
+                                <div style="display:flex;gap:10px;">
+                                    <a href="https://wheelsoncart-website-production.up.railway.app"
+                                        style="display:inline-flex;align-items:center;gap:5px;color:#2EBED3;font-size:13px;font-weight:600;text-decoration:none;transition:color 0.2s;"
+                                        onmouseover="this.style.color='white'" onmouseout="this.style.color='#2EBED3'">
+                                        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3" />
+                                        </svg> Live demo
+                                    </a>
+                                    <a href="#"
+                                        style="display:inline-flex;align-items:center;gap:5px;color:#6b7280;font-size:13px;font-weight:600;text-decoration:none;transition:color 0.2s;"
+                                        onmouseover="this.style.color='white'" onmouseout="this.style.color='#6b7280'">
+                                        <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
+                                            <path
+                                                d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z" />
+                                        </svg> GitHub
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Continue wrapping every project card like this -->
+
+                </div>
+            </div>
+
+            <!-- Next Button -->
+            <button id="nextProject"
+                class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-5 z-20 w-10 h-10 rounded-full bg-[#1a1a2e] border border-[#2a2a3e] text-white hover:bg-violet-600 transition">
+                ❯
+            </button>
+
+        </div>
+
+        <div class="text-center mt-10 reveal">
+            <a href="https://github.com/Kuldeep-Lab" target="_blank" class="btn-ghost">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z" />
+                </svg>
+                View all on GitHub
+            </a>
+        </div>
+    </section>
+
+    <!--  CONTACT -->
+    <section id="contact" style="background:#111118;border-top:1px solid #2a2a3e;" class="py-28">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center mb-16 reveal">
+                <div class="section-eyebrow mb-4" style="margin:0 auto 16px;">Contact</div>
+                <h2 class="font-display text-4xl font-bold text-white mb-4">Let's work together</h2>
+                <p class="text-soft text-lg max-w-xl mx-auto">Have a project in mind? I'm open to freelance work,
+                    full-time roles, and interesting collaborations. Drop me a message.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-5 gap-10 items-start">
+                <!-- Info -->
+                <div class="lg:col-span-2 reveal">
+                    <div style="display:flex;flex-direction:column;gap:16px;">
+                        <a href="mailto:alex@example.com"
+                            style="display:flex;align-items:center;gap:14px;padding:16px 20px;background:#1a1a2e;border:1px solid #2a2a3e;border-radius:12px;text-decoration:none;transition:border-color 0.2s;"
+                            onmouseover="this.style.borderColor='#00CEEA'"
+                            onmouseout="this.style.borderColor='#2a2a3e'">
+                            <div
+                                style="width:40px;height:40px;background:rgba(124,58,237,0.15);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                                <svg width="18" height="18" fill="none" stroke="#2EBED3" stroke-width="2"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                    <polyline points="22,6 12,13 2,6" />
+                                </svg>
+                            </div>
+                            <div>
+                                <div style="font-size:12px;color:#6b7280;margin-bottom:2px;">Email</div>
+                                <div style="color:#e5e7eb;font-weight:500;font-size:14px;">kuleepsingh93825@gmail.com
+                                </div>
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/kuldeep-sisodiya" target="_blank"
+                            style="display:flex;align-items:center;gap:14px;padding:16px 20px;background:#1a1a2e;border:1px solid #2a2a3e;border-radius:12px;text-decoration:none;transition:border-color 0.2s;"
+                            onmouseover="this.style.borderColor='#00CEEA'"
+                            onmouseout="this.style.borderColor='#2a2a3e'">
+                            <div
+                                style="width:40px;height:40px;background:rgba(124,58,237,0.15);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                                <svg width="18" height="18" fill="#2EBED3" viewBox="0 0 24 24">
+                                    <path
+                                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <div style="font-size:12px;color:#6b7280;margin-bottom:2px;">LinkedIn</div>
+                                <div style="color:#e5e7eb;font-weight:500;font-size:14px;">
+                                    www.linkedin.com/in/kuldeep-sisodiya
+                                </div>
+                            </div>
+                        </a>
+                        <a href="https://github.com/Kuldeep-Lab" target="_blank"
+                            style="display:flex;align-items:center;gap:14px;padding:16px 20px;background:#1a1a2e;border:1px solid #2a2a3e;border-radius:12px;text-decoration:none;transition:border-color 0.2s;"
+                            onmouseover="this.style.borderColor='#00CEEA'"
+                            onmouseout="this.style.borderColor='#2a2a3e'">
+                            <div
+                                style="width:40px;height:40px;background:rgba(124,58,237,0.15);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                                <svg width="18" height="18" fill="#2EBED3" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <div style="font-size:12px;color:#6b7280;margin-bottom:2px;">GitHub</div>
+                                <div style="color:#e5e7eb;font-weight:500;font-size:14px;">
+                                    https://github.com/Kuldeep-Lab</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <div class="lg:col-span-3 reveal reveal-delay-1">
+                    <form onsubmit="handleSubmit(event)"
+                        style="display:flex;flex-direction:column;gap:16px;background:#1a1a2e;border:1px solid #2a2a3e;border-radius:16px;padding:28px;">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label
+                                    style="display:block;font-size:13px;font-weight:500;color:#9ca3af;margin-bottom:6px;">Name</label>
+                                <input type="text" placeholder="Your name" class="form-input" required />
+                            </div>
+                            <div>
+                                <label
+                                    style="display:block;font-size:13px;font-weight:500;color:#9ca3af;margin-bottom:6px;">Email</label>
+                                <input type="email" placeholder="your@email.com" class="form-input" required />
+                            </div>
+                        </div>
+                        <div>
+                            <label
+                                style="display:block;font-size:13px;font-weight:500;color:#9ca3af;margin-bottom:6px;">Subject</label>
+                            <input type="text" placeholder="What's this about?" class="form-input" />
+                        </div>
+                        <div>
+                            <label
+                                style="display:block;font-size:13px;font-weight:500;color:#9ca3af;margin-bottom:6px;">Message</label>
+                            <textarea placeholder="Tell me about your project..." class="form-input" rows="5"
+                                style="resize:vertical;" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary" style="width:100%;justify-content:center;"
+                            id="submit-btn">
+                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <line x1="22" y1="2" x2="11" y2="13" />
+                                <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                            </svg>
+                            Send message
+                        </button>
+                        <div id="form-success"
+                            style="display:none;text-align:center;color:#34d399;font-size:14px;font-weight:500;">✓
+                            Message sent! I'll get back to you soon.</div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--  FOOTER  -->
+    <footer style="border-top:1px solid #2a2a3e;padding:24px 0;">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="font-display font-bold text-lg text-white">KS
+                <span class="text-violet-500">.</span>
+            </div>
+            <div style="color:#4b5563;font-size:14px;">
+                © 2026 Kuldeep Sisodiya. All rights reserved.
+            </div>
+            <div style="display:flex;gap:12px;">
+                <a href="https://github.com/Kuldeep-Lab" target="_blank" style="color:#6b7280;transition:color 0.2s;"
+                    onmouseover="this.style.color='#2EBED3'" onmouseout="this.style.color='#6b7280'"
+                    aria-label="GitHub">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z" />
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/kuldeep-sisodiya" target="_blank"
+                    style="color:#6b7280;transition:color 0.2s;" onmouseover="this.style.color='#2EBED3'"
+                    onmouseout="this.style.color='#6b7280'" aria-label="LinkedIn">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!--java script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+
+<!-- <section id="projects" class="py-28 max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16 reveal">
+            <div class="section-eyebrow mb-4" style="margin:0 auto 16px;">Selected Work</div>
+            <h2 class="font-display text-4xl font-bold text-white mb-4">Things I've built</h2>
+            <p class="text-soft text-lg max-w-xl mx-auto">A selection of projects I'm proud of. Every one shipped with
+                care for performance, accessibility, and design.</p>
+        </div>
+
+        <div class="projects-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+         
+            <div class="project-card reveal">
+                <div
+                    style="height:180px;background:linear-gradient(135deg,#1a0a3e,#2a1a5e);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;">
+                    <div
+                        style="position:absolute;inset:0;background:url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2240%22 height=%2240%22><circle cx=%2220%22 cy=%2220%22 r=%221%22 fill=%22rgba(167,139,250,0.3)%22/></svg>') repeat;opacity:0.5;">
+                    </div>
+                    <div style="text-align:center;z-index:1;">
+                        <div style="font-size:40px;margin-bottom:8px;">📊</div>
+                        <div style="font-size:12px;color:#2EBED3;font-weight:600;letter-spacing:0.05em;">DASHBOARD APP
+                        </div>
+                    </div>
+                </div>
+                <div style="padding:20px;">
+                    <h3 class="font-display font-semibold text-white text-lg mb-2">Analytics Dashboard</h3>
+                    <p style="color:#6b7280;font-size:14px;line-height:1.6;margin-bottom:14px;">Real-time data
+                        visualisation platform built with React, D3.js, and WebSockets. Features live chart updates and
+                        custom drag-and-drop widgets.</p>
+                    <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px;">
+                        <span class="skill-badge" style="font-size:11px;padding:3px 10px;">React</span>
+                        <span class="skill-badge" style="font-size:11px;padding:3px 10px;">D3.js</span>
+                        <span class="skill-badge" style="font-size:11px;padding:3px 10px;">JavaScript</span>
+                        <span class="skill-badge" style="font-size:11px;padding:3px 10px;">WebSockets</span>
+                    </div>
+                    <div style="display:flex;gap:10px;">
+                        <a href="#"
+                            style="display:inline-flex;align-items:center;gap:5px;color:#2EBED3;font-size:13px;font-weight:600;text-decoration:none;transition:color 0.2s;"
+                            onmouseover="this.style.color='white'" onmouseout="this.style.color='#2EBED3'">
+                            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3" />
+                            </svg> Live demo
+                        </a>
+                        <a href="#"
+                            style="display:inline-flex;align-items:center;gap:5px;color:#6b7280;font-size:13px;font-weight:600;text-decoration:none;transition:color 0.2s;"
+                            onmouseover="this.style.color='white'" onmouseout="this.style.color='#6b7280'">
+                            <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z" />
+                            </svg> GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="project-card reveal reveal-delay-1">
+                <div
+                    style="height:180px;background:linear-gradient(135deg,#0a2e1a,#1a4e2a);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;">
+                    <div style="text-align:center;z-index:1;">
+                        <div style="font-size:40px;margin-bottom:8px;">🛒</div>
+                        <div style="font-size:12px;color:#34d399;font-weight:600;letter-spacing:0.05em;">E-COMMERCE
+                        </div>
+                    </div>
+                </div>
+                <div style="padding:20px;">
+                    <h3 class="font-display font-semibold text-white text-lg mb-2">Shopfront UI</h3>
+                    <p style="color:#6b7280;font-size:14px;line-height:1.6;margin-bottom:14px;">Full-featured e-commerce
+                        storefront with cart, wishlist, Stripe payments, and a CMS-driven product catalogue. Scores 98
+                        on Lighthouse.</p>
+                    <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px;">
+                        <span class="skill-badge" style="font-size:11px;padding:3px 10px;">Next.js</span>
+                        <span class="skill-badge" style="font-size:11px;padding:3px 10px;">Stripe</span>
+                        <span class="skill-badge" style="font-size:11px;padding:3px 10px;">Sanity CMS</span>
+                        <span class="skill-badge" style="font-size:11px;padding:3px 10px;">Tailwind</span>
+                    </div>
+                    <div style="display:flex;gap:10px;">
+                        <a href="#"
+                            style="display:inline-flex;align-items:center;gap:5px;color:#2EBED3;font-size:13px;font-weight:600;text-decoration:none;transition:color 0.2s;"
+                            onmouseover="this.style.color='white'" onmouseout="this.style.color='#2EBED3'">
+                            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3" />
+                            </svg> Live demo
+                        </a>
+                        <a href="#"
+                            style="display:inline-flex;align-items:center;gap:5px;color:#6b7280;font-size:13px;font-weight:600;text-decoration:none;transition:color 0.2s;"
+                            onmouseover="this.style.color='white'" onmouseout="this.style.color='#6b7280'">
+                            <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z" />
+                            </svg> GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+          
+            <div class="project-card reveal reveal-delay-2">
+                <div
+                    style="height:180px;background:linear-gradient(135deg,#2e1a0a,#4e2a1a);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;">
+                    <div style="text-align:center;z-index:1;">
+                        <div style="font-size:40px;margin-bottom:8px;">💬</div>
+                        <div style="font-size:12px;color:#fb923c;font-weight:600;letter-spacing:0.05em;">REAL-TIME APP
+                        </div>
+                    </div>
+                </div>
+                <div style="padding:20px;">
+                    <h3 class="font-display font-semibold text-white text-lg mb-2">DevChat</h3>
+                    <p style="color:#6b7280;font-size:14px;line-height:1.6;margin-bottom:14px;">Real-time collaborative
+                        chat for developer teams — code syntax highlighting, thread replies, GitHub integration, and
+                        markdown support.</p>
+                    <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px;">
+                        <span class="skill-badge" style="font-size:11px;padding:3px 10px;">React</span>
+                        <span class="skill-badge" style="font-size:11px;padding:3px 10px;">Socket.io</span>
+                        <span class="skill-badge" style="font-size:11px;padding:3px 10px;">Node.js</span>
+                        <span class="skill-badge" style="font-size:11px;padding:3px 10px;">MongoDB</span>
+                    </div>
+                    <div style="display:flex;gap:10px;">
+                        <a href="#"
+                            style="display:inline-flex;align-items:center;gap:5px;color:#2EBED3;font-size:13px;font-weight:600;text-decoration:none;transition:color 0.2s;"
+                            onmouseover="this.style.color='white'" onmouseout="this.style.color='#2EBED3'">
+                            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3" />
+                            </svg> Live demo
+                        </a>
+                        <a href="#"
+                            style="display:inline-flex;align-items:center;gap:5px;color:#6b7280;font-size:13px;font-weight:600;text-decoration:none;transition:color 0.2s;"
+                            onmouseover="this.style.color='white'" onmouseout="this.style.color='#6b7280'">
+                            <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z" />
+                            </svg> GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="text-center mt-10 reveal">
+            <a href="https://github.com" target="_blank" class="btn-ghost">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z" />
+                </svg>
+                View all on GitHub
+            </a>
+        </div>
+    </section> -->
